@@ -189,13 +189,13 @@ func (o *TestOptions) runTest(ctx context.Context, preservePolicy PreservePolicy
 	}
 
 	inputDir := filepath.Join(o.TestDirectory, "input-dir")
-	args := applyconfiguration.ApplyConfigurationFlagValues{
+	options := applyconfiguration.ApplyConfigurationOptions{
 		InputDirectory:  inputDir,
 		OutputDirectory: o.OutputDirectory,
 		Now:             o.Description.Now.Time,
 		Controllers:     o.Description.Controllers,
 	}
-	actualResult, execErr := applyconfiguration.ExecApplyConfiguration(ctx, o.Description.BinaryName, args)
+	actualResult, execErr := applyconfiguration.ExecApplyConfiguration(ctx, o.Description.BinaryName, options)
 	endTime := now()
 	currJunit.Duration = endTime.Sub(startTime).Round(1 * time.Second).Seconds()
 
