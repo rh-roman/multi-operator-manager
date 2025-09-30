@@ -182,7 +182,7 @@ func TestUniqueResourceSet(t *testing.T) {
 				t.Errorf("expected %d items, got %d", len(tc.expected), len(result))
 			}
 			if !equality.Semantic.DeepEqual(result, tc.expected) {
-				t.Errorf(diff.ObjectDiff(tc.expected, result))
+				t.Error(diff.ObjectDiff(tc.expected, result))
 			}
 		})
 	}
