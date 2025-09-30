@@ -2,7 +2,7 @@ action: ApplyStatus
 controllerInstanceName: sample-operator-example-ResourceSync
 fieldManager: sample-operator-example-ResourceSync
 generateName: ""
-mame: cluster
+name: cluster
 resourceType:
   Group: operator.openshift.io
   Resource: authentications

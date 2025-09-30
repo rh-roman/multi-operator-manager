@@ -1,7 +1,7 @@
 action: Create
 controllerInstanceName: sample-operator-Demo
 generateName: ""
-mame: foo
+name: foo
 namespace: openshift-authentication
 resourceType:
   Group: ""
