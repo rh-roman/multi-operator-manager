@@ -1,7 +1,7 @@
 action: PatchStatus
 controllerInstanceName: sample-operator-RemoveStaleConditions
 generateName: ""
-mame: cluster
+name: cluster
 patchType: application/json-patch+json
 resourceType:
   Group: operator.openshift.io
